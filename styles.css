@@ -1,0 +1,237 @@
+/* General Styles */
+.plus-jakarta-sans {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Adjust the weight as needed */
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: var(--button-text);
+    text-decoration: none;
+
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-background);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.navbar .menu-icon {
+    color: var(--navbar-text);
+    padding: 14px 16px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.navbar a.title {
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--navbar-text);
+    padding: 14px 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--navbar-hover-background);
+}
+
+/* Menu Links */
+.menu-links {
+    position: fixed;
+    top: 60px; /* Height of the navbar */
+    left: -250px; /* Hide the menu by default */
+    height: calc(100% - 60px); /* Full height (minus the navbar height) */
+    width: 250px;
+    background-color: var(--menu-links-background);
+    transition: left 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-links.show {
+    left: 0; /* Slide in from the left when 'show' class is added */
+}
+
+.menu-links a {
+    color: var(--menu-links-text);
+    text-decoration: none;
+    padding: 12px 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-links a:hover {
+    background-color: var(--menu-links-hover-background);
+}
+
+main {
+    padding: 20px;
+}
+
+.input {
+    border: 2px solid transparent;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.input:hover, .input:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgba(74, 157, 236, 0.2);
+    background-color: white;
+}
+
+#task-form, #task-list {
+    background: var(--element-background);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    border-radius: 10px; /* Apply border-radius to task items */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-form form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+#task-form form label {
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+#task-form form input, #task-form form textarea, #task-form form select {
+    grid-column: 2 / 3;
+    padding: 5px;
+    background: var(--input-background);
+    color: var(--input-text);
+    border: 1px solid var(--input-border);
+}
+
+/* Add Task Button */
+#task-form form button {
+    grid-column: 2 / 3;
+    padding: 10px;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Filters button (Low/Medium/High etc.) */
+#filters button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border-radius: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+ul#tasks {
+    list-style: none;
+    padding: 0;
+}
+
+ul#tasks li {
+    background: var(--element-background);
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+ul#tasks li.completed {
+    text-decoration: line-through;
+}
+
+ul#tasks li.completed button {
+    text-decoration: none;
+}
+
+body.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+body.font-arial { font-family: Arial, sans-serif; }
+body.font-georgia { font-family: Georgia, serif; }
+body.font-verdana { font-family: Verdana, sans-serif; }
+
+
+/* Light Mode */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #000;
+    --header-background: #333;
+    --header-text: #fff;
+    --element-background: #fff;
+    --input-background: #fff;
+    --input-text: #000;
+    --input-border: #ccc;
+    --button-background: #333;
+    --button-text: #fff;
+    --navbar-background: #fff;
+    --navbar-text: #333;
+    --navbar-hover-background: #808080;
+    --menu-links-background: #fff;
+    --menu-links-text: #333;
+    --menu-links-hover-background: #f1f1f1;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+    --header-background: #000;
+    --header-text: #fff;
+    --element-background: #444;
+    --input-background: #555;
+    --input-text: #fff;
+    --input-border: #666;
+    --button-background: #555;
+    --button-text: #fff;
+    --navbar-background: #444;
+    --navbar-text: #fff;
+    --navbar-hover-background: #555;
+    --menu-links-background: #555;
+    --menu-links-text: #fff;
+    --menu-links-hover-background: #666;
+}

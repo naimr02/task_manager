@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span class="material-symbols-outlined" style="vertical-align: middle;">menu</span>
+        </div>
+        <a class="title" href="index.html" id="showName">Task Manager</a>
+        <div class="menu-links">
+            <a href="index.html" ><span class="material-symbols-outlined" style="vertical-align: middle;">keep</span>&emsp; Home</a>
+            <a href="settings.html"><span class="material-symbols-outlined" style="vertical-align: middle;">display_settings</span>&emsp; Settings</a>
+            <a href="about.html"><span class="material-symbols-outlined" style="vertical-align: sub;">info</span>&emsp; About</a>
+            <br>
+            <a><section id="mode-switch-section">
+                <label for="mode-switch">Dark Mode</label>
+                <input type="checkbox" id="mode-switch">
+            </section></a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <main>
+        <section id="task-list">
+            <h2>Settings</h2>
+            <div id="filters">
+                <p>Change the name of the app</p>
+                <button onclick="getName()">Change name</button>
+            </div>
+            <br><br>
+            <div id="filters">
+            <label for="font-select">Choose a font:</label>
+            <select id="font-select" class="input">
+                <option value="Jakarta">Plus Jakarta Sans (default)</option>
+                <option value="Arial">Arial</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+    <script src="scripts2.js"></script>
+</body>
+</html>
